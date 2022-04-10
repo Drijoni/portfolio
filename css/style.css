@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Space+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+:root {
+    --bgCol: #111111;
+    --linesColor: #fa016a;
+    --font: 'Poppins';
+    --mainTextC: #FAFAFA;
+    --secondTextC: #858585;
+    --thirdTextC: #B4B4B4;
+}
+
+
+body {
+    background-color: var(--bgCol);
+}
+
+/* Header*/
+header {
+    width: 100%;
+    padding: 30 30 30 200;
+}
+
+/* logo */
+
+.logoContainer p {
+    font-family: 'Poppins';
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logoContainer p::before {
+    content:"D";
+    color: var(--linesColor);
+}
+
+
+/* Nav Menu*/
+.menuContainer {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.menuItems::before, .menuItems::after {
+    content: '';
+    background-color: var(--linesColor);
+    position: absolute;
+    height: 10%;
+    width: 2px;
+}
+
+.menuItems::before {
+    left: 50%;
+    top: 0;
+}
+
+.menuItems::after {
+    left: 50%;
+    top: 90%;
+}
+
+.menuItems ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100 0 130 0;
+}
+
+.menuItems ul li {
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 20;
+    transform: rotate(270deg);
+    text-transform: uppercase;
+
+}
+
+.menuItems ul li a {
+    color: var(--secondTextC);
+    text-decoration: none;
+}
+
+.menuItems ul li a:hover {
+    transition: .2s;
+    color: white;
+}
+
+/* Mobile sidebar*/
+
+#toggleMenu , #close{
+    padding:20;
+    display: none;
+    font-size: 32px;
+    color: white;
+}
+
+#open{
+    padding: 20;
+    font-size: 32px;
+    color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidenav a {
+    padding: 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Poppins';
+}
+
+.sidenav div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.mobileIcons {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    list-style: none;
+}
+
+.mobileIcons i {
+    color: white;
+    font-size: 35px;
+}
+
+/* Social Icons*/
+.socialsContainer {
+    position: absolute;
+    top: 35%;
+    left: 20;
+
+}
+
+.socialsContainer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.socialsContainer ul li {
+    margin: 20 0;
+    font-size: 20px;
+}
+
+.socialsContainer ul li a i {
+    color: var(--mainTextC);
+}
+
+.socialsContainer ul li i:hover {
+    transition: .2s;
+    color: var(--linesColor);
+}
+
+
+/* Main Container*/
+.wrapper {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.contentContainer {
+    padding-left: 200px;
+    font-family: var(--font);
+    width: 80%;
+}
+
+.contentContainer * {
+    margin: 20 10px;
+}
+
+.contentContainer h1 {
+    font-size: 48px;
+    color: var(--mainTextC);
+}
+
+.contentContainer p {
+    width: 50%;
+    font-weight: 400;
+    color: var(--thirdTextC);
+    padding: 0 0 10 0;
+}
+
+.contentContainer a {
+    background-color: transparent;
+    border: 1px solid var(--linesColor);
+    padding: 10 20;
+    border-radius: 5px;
+    font-family: var(--font);
+    font-weight: bold;
+    color: var(--thirdTextC);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contentContainer a:hover {
+    transition: .2s;
+    background-color: var(--linesColor);
+    border: none;
+    color: white;
+
+}
+
+
+
+/* Background Image*/
+
+.backgroundImage {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+}
+
+.backgroundImage img {
+    width: 100%;
+}
+
+/* Page title*/
+
+.pageTitle {
+    border-bottom: 3px solid var(--linesColor);
+}
+
+/* Page Title Container*/
+.pageTitleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.pageTitleContainer::before {
+    content: '';
+    background-color: var(--linesColor);
+    position: absolute;
+    height: 30%;
+    width: 2px;
+    transform: rotate(90deg);
+
+}
+
+.pageTitleContainer h1 {
+    font-family: var(--font);
+    color: var(--mainTextC);
+    position: absolute;
+    left: 180px;
+    font-size: 60;
+    opacity: .2;
+}
+
+/* Footer*/
+
+footer {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    font-family: var(--font);
+    color: var(--mainTextC);
+}
+
+footer span {
+    color: purple;
+    font-weight: bold;
+}
+
+
+.coverImage {
+    width: 100%;
+    max-width: 400px;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+
+/* Skills Page*/
+
+.programmingLanguages, .frameworks {
+    margin: 30 0;
+}
+
+.programmingLanguages h3, .frameworks h3 {
+    color: white;
+}
+
+
+.plContainer, .fContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.plContainer>p::before, .fContainer>p::before {
+    content: "\2022";
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    width: 10px;
+    margin: 0 2;
+}
+
+.plContainer>p, .fContainer>p {
+    width: max-content;
+}
+
+
+/* Project's page*/
+.projectsContainer {
+    display: flex;
+}
+
+.projectCard {
+    background-color: #252525;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+
+.projectCard * {
+    margin: 0;
+    padding: 5;
+    color: white;
+}
+
+.projectCard h5 {
+    font-weight: 500;
+}
+
+.projectCard h6 {
+    font-weight: 100;
+}
+
+.projectCard a {
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding: 5 15;
+    background-color: rgb(241, 158, 4);
+    border-radius: 5px;
+}
+
+.projectCard a:hover {
+    transition: .2s;
+    background-color: rgb(192, 127, 5);
+}
+
+.contentForCard * {
+    margin: 5px;
+}
+
+.contentForCard {
+    margin-top: auto;
+    padding: 10 0;
+}
+
+/* Blog page*/
+
+.blogsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.cardBlog {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #252525;
+}
+
+.blogsContainer * {
+    margin: 0;
+    padding: 0;
+}
+
+.contentBlog {
+    margin-top: auto;
+    padding: 10 0;
+}
+
+.cardBlog h4, .cardBlog h5, .contentBlog h6 {
+    color: white;
+}
+
+.cardBlog h4 {
+    font-weight: bold;
+}
+
+.cardBlog h5 {
+    font-weight: 100;
+}
+
+.contentBlog p {
+    width: 100%;
+}
+
+.contentBlog h6 {
+    padding:10 20;
+}
+
+
+
+/* Responsive*/
+
+
+@media (max-width:1000px) {
+
+    /* Home */
+
+    .contentContainer * {
+        margin: 30 0;
+    }
+
+    .contentContainer p {
+        width: 90%;
+    }
+
+    .backgroundImage img {
+        display: none;
+    }
+
+
+    /* Skills*/
+    .programmingLanguages *, .frameworks * {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Blog and projects */
+
+    .blogsContainer *, .projectsContainer * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .blogsContainer, .projectsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cardBlog, .projectCard {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-width: 100%;
+        margin: 20 0;
+    }
+
+    .coverImage {
+        max-width: 200px;
+    }
+
+    .contentBlog h4, .contentBlog h5 {
+        padding: 0 20;
+    }
+
+    .contentForCard {
+        padding: 20;
+    }
+
+    .contentForCard * {
+        margin: 5;
+    }
+
+}
+
+
+@media (max-width:750px) {
+
+    .menuItems, .socialsContainer {
+        display: none;
+    }
+
+    #toggleMenu {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    .contentContainer {
+        width: 100%;
+        padding: 40;
+    }
+
+
+    header {
+        padding:40;
+    }
+
+
+}
+
+@media (max-width:500px) {
+    .coverImage {
+        display: none;
+    }
+
+    .contentBlog {
+        padding: 10;
+    }
+
+    .pageTitleContainer {
+        display: none;
+    }
+
+}
