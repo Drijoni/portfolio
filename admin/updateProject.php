@@ -30,6 +30,7 @@ $projects = $getProject->fetchAll();
                 <input type="text" value="<?= $projects[0]['technologies'] ?>" name="technologies" class="formInput" placeholder="Technologies used: HTML, CSS, PHP etc...">
                 <input type="file" value="" name="image" class="formInput" id="image" style="display: none;" onchange="changeText()">
                 <input type="text" name="github" value="<?= $projects[0]['github'] ?>" class="formInput" placeholder="GitHub Repo">
+                <input type="text" name="preview" value="<?= $projects[0]['preview'] ?>" class="formInput" placeholder="Preview Link">
                 <label for="image" class="chooseFile" id="chooseFile">Update the image for the project (max 700KB)</label>
                 <textarea value="<?= $projects[0]['description'] ?>" name="description" rows="4" cols="50" class="formInput" placeholder="Update your description..."></textarea>
                 <Button name="submit" class="dashboardButton">Submit</Button>

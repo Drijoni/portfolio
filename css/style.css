@@ -37,7 +37,7 @@ header {
 }
 
 .logoContainer p::before {
-    content:"D";
+    content: "D";
     color: var(--linesColor);
 }
 
@@ -98,14 +98,14 @@ header {
 
 /* Mobile sidebar*/
 
-#toggleMenu , #close{
-    padding:20;
+#toggleMenu, #close {
+    padding: 20;
     display: none;
     font-size: 32px;
     color: white;
 }
 
-#open{
+#open {
     padding: 20;
     font-size: 32px;
     color: white;
@@ -115,7 +115,7 @@ header {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 19;
     top: 0;
     left: 0;
     background-color: black;
@@ -304,10 +304,10 @@ footer span {
 
 
 .coverImage {
-    width: 100%;
-    max-width: 400px;
+    width: auto;
+    max-height: 300px;
     background-size: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 
@@ -346,24 +346,31 @@ footer span {
 /* Project's page*/
 .projectsContainer {
     display: flex;
+    justify-content: center;
+    width: 100%;
+
 }
 
 .projectCard {
     background-color: #252525;
-    max-width: 50%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    text-align: center;
     border-radius: 5px;
-    max-width: 400px;
+    height: 300px;
+
 }
 
 
 .projectCard * {
     margin: 0;
-    padding: 5;
     color: white;
+}
+
+.projectCard h4 {
+    font-size: 28px;
 }
 
 .projectCard h5 {
@@ -371,6 +378,7 @@ footer span {
 }
 
 .projectCard h6 {
+    font-size: 14px;
     font-weight: 100;
 }
 
@@ -389,12 +397,22 @@ footer span {
 }
 
 .contentForCard * {
-    margin: 5px;
+    margin: 10px;
 }
 
 .contentForCard {
-    margin-top: auto;
-    padding: 10 0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+
+.buttonsContainer {
+    margin-left: -3;
+}
+
+.checkMoreP {
+    color: white;
 }
 
 /* Blog page*/
@@ -442,7 +460,7 @@ footer span {
 }
 
 .contentBlog h6 {
-    padding:10 20;
+    padding: 10 20;
 }
 
 
@@ -450,7 +468,7 @@ footer span {
 /* Responsive*/
 
 
-@media (max-width:1000px) {
+@media (max-width:1180px) {
 
     /* Home */
 
@@ -497,7 +515,7 @@ footer span {
     }
 
     .coverImage {
-        max-width: 200px;
+        display: none;
     }
 
     .contentBlog h4, .contentBlog h5 {
@@ -534,7 +552,7 @@ footer span {
 
 
     header {
-        padding:40;
+        padding: 40;
     }
 
 
@@ -553,4 +571,33 @@ footer span {
         display: none;
     }
 
+}
+
+@media (max-width:400px) {
+    .contentContainer {
+        padding: 10;
+    }
+}
+
+
+
+/* Swiper */
+
+.swiper-wrapper, .swiper, .swiper-slide {
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-slide {
+    width: 100%;
+    padding: 10;
+}
+
+.swiper {
+    display: flex;
+    width: 100%;
+}
+
+.swiper-pagination-bullet {
+    background-color: white;
 }

@@ -33,7 +33,7 @@
         <div class="contentContainer">
             <h1 class="pageTitle">Skills</h1>
             <div class="programmingLanguages">
-                <h3>Programming Languages:</h3>
+                <h3>Programming Languages & CMS's:</h3>
                 <div class="plContainer">
                     <?php
                     foreach ($skills as $skill) {

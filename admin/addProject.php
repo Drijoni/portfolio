@@ -23,6 +23,7 @@ require 'navSide.php'
                 <input type="text" name="technologies" class="formInput" placeholder="Technologies used: HTML, CSS, PHP etc...">
                 <input type="file" name="image" class="formInput" id="image" style="display: none;" onchange="changeText()">
                 <input type="text" name="github" class="formInput" placeholder="GitHub Repo">
+                <input type="text" name="preview" class="formInput" placeholder="Preview Link">
                 <label for="image" class="chooseFile" id="chooseFile">Choose an image for the project (max 700KB)</label>
                 <textarea name="description" rows="4" cols="50" class="formInput" placeholder="Description for the project..."></textarea>
                 <Button name="submit" class="dashboardButton">Submit</Button>

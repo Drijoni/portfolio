@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  
+
 </head>
 
 <body>
@@ -32,32 +32,32 @@
 
 
     </div>
-        <!--Sidenav-->
-        <div id="mySidenav" class="sidenav">
-            <div>
-                <a href="index.php">Home </a>
-                <a href="about.php">About </a>
-                <a href="skills.php">Skills </a>
-                <a href="projects.php">Projects </a>
-                <a href="blog.php">Blog </a>
+    <!--Sidenav-->
+    <div id="mySidenav" class="sidenav">
+        <div>
+            <a href="index.php">Home </a>
+            <a href="about.php">About </a>
+            <a href="skills.php">Skills </a>
+            <a href="projects.php">Projects </a>
+            <a href="blog.php">Blog </a>
 
-            </div>
-            <div>
-                <ul class="mobileIcons">
-                    <li> <a href="mailto:drinihalili15@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
-                    <li> <a href="https://www.linkedin.com/in/drijon/" target="_blank"> <i class="fa-brands fa-linkedin"></i>
-                        </a> </li>
-                    <li> <a target="_blank" href="https://github.com/Drijoni/"><i class="fa-brands fa-github"></i </li>
-                    <li><a onclick="showDiscord()"><i class="fa-brands fa-discord"></i></a></li>
-                </ul>
-            </div>
         </div>
+        <div>
+            <ul class="mobileIcons">
+                <li> <a href="mailto:halilidrijon@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+                <li> <a href="https://www.linkedin.com/in/drijon/" target="_blank"> <i class="fa-brands fa-linkedin"></i>
+                    </a> </li>
+                <li> <a target="_blank" href="https://github.com/Drijoni/"><i class="fa-brands fa-github"></i </li>
+                <li><a onclick="showDiscord()"><i class="fa-brands fa-discord"></i></a></li>
+            </ul>
+        </div>
+    </div>
 
 
     <!--Header and Logo-->
     <header>
         <div class="logoContainer">
-                <p>RI</p>
+            <p>RI</p>
         </div>
     </header>
 
@@ -66,7 +66,7 @@
     <div class="socialsContainer">
         <ul>
             <li>
-                <a href="mailto:drinihalili15@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <a href="mailto:halilidrijon@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </li>
 
             <li>
