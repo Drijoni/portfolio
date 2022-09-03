@@ -19,6 +19,17 @@
                 </div>
                 <input type="text" name="username" placeholder="username">
                 <input type="password" name="password" placeholder="*********">
+
+<?php 
+$message  = isset($_GET['error']) ? $_GET['error'] : null;
+if(!empty($message)) {
+    echo '<label class="err-message">'.$message.'</label>';
+}
+
+
+?> 
+
+
                 <input type="submit" name="submit" value="Log In">
             </div>
 

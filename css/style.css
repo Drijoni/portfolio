@@ -36,6 +36,10 @@ header {
     font-size: 20px;
 }
 
+.logoContainer a {
+    text-decoration: none;
+}
+
 .logoContainer p::before {
     content: "D";
     color: var(--linesColor);
@@ -175,6 +179,7 @@ header {
 .socialsContainer ul li {
     margin: 20 0;
     font-size: 20px;
+    z-index: 99;
 }
 
 .socialsContainer ul li a i {
@@ -304,10 +309,8 @@ footer span {
 
 
 .coverImage {
-    width: auto;
-    max-height: 300px;
     background-size: cover;
-    border-radius: 10px;
+    height: 300px;
 }
 
 
@@ -340,6 +343,7 @@ footer span {
 
 .plContainer>p, .fContainer>p {
     width: max-content;
+
 }
 
 
@@ -356,10 +360,12 @@ footer span {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     border-radius: 5px;
     height: 300px;
+    overflow: hidden;
+    justify-self: flex-start;
+    gap:10px;
 
 }
 
@@ -420,17 +426,18 @@ footer span {
 .blogsContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: space-between; 
+    gap:10px;  
 }
 
 .cardBlog {
-    width: 100%;
-    max-width: 300px;
+    flex-basis: 30%;
     display: flex;
     flex-direction: column;
     border: 1px solid #252525;
+    height: 450px;
 }
 
 .blogsContainer * {
@@ -464,6 +471,52 @@ footer span {
 }
 
 
+/* Loader */
+.loaderContainer {
+    z-index: 40;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--bgCol);
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    z-index: 100;
+}
+
+.loaderContainer h1 {
+    color: white;
+}
+
+.loaderCircle {
+    position: absolute;
+    border: 2px solid var(--linesColor); 
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 3s linear 3;
+    animation: border-pulsate 3s linear 3;
+}
+
+.loaderContainer>h1::before {
+    content: "D";
+    color: var(--linesColor);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg) }
+}
+
+@keyframes border-pulsate {
+    0%   { border-color: var(--linesColor); }
+    50%  { border-color: #00ffff00; }
+    100% { border-color: var(--linesColor); }
+}
+
+
 
 /* Responsive*/
 
@@ -491,6 +544,10 @@ footer span {
         margin: 0;
     }
 
+    .plContainer>p , .fContainer>p {
+        flex-basis: 50%;
+    }
+
     /* Blog and projects */
 
     .blogsContainer *, .projectsContainer * {
@@ -510,7 +567,7 @@ footer span {
         display: flex;
         flex-direction: row;
         align-items: center;
-        max-width: 100%;
+        width: 100%;
         margin: 20 0;
     }
 
@@ -547,7 +604,7 @@ footer span {
 
     .contentContainer {
         width: 100%;
-        padding: 40;
+        padding:0px 40px;
     }
 
 
@@ -555,6 +612,9 @@ footer span {
         padding: 40;
     }
 
+    footer {
+        top:97%;
+    }
 
 }
 
@@ -590,7 +650,7 @@ footer span {
 
 .swiper-slide {
     width: 100%;
-    padding: 10;
+    padding: 50px 10px;
 }
 
 .swiper {

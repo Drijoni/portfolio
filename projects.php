@@ -15,6 +15,7 @@ $projects = $getProjects->fetchAll();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="icon" href="assets/images/drilogo.png">
     <!--For swiper-->
     <title>Projects</title>
 </head>
@@ -36,13 +37,13 @@ $projects = $getProjects->fetchAll();
                             <div class="projectCard">
                                 <?php echo '<img class="coverImage" src="data:image/jpeg;base64,' . base64_encode($project['image']) . '"/>';
                                 ?>
-                                <div class="contentForCard ">
+                                <div class="contentForCard">
                                     <h4><?= $project['name'] ?></h4>
                                     <h5><?= $project['technologies'] ?></h5>
                                     <h6><?= $project['description'] ?></h6>
                                     <div class="buttonsContainer">
                                         <a target="_blank" href="<?= $project['github'] ?>">GitHub</a>
-                                        <a target="_blank" href="<?= $project['preview'] ?>">Live Preview</a>
+                                        <a target="_blank" href="<?= $project['preview'] ?>">Preview</a>
                                     </div>
                                 </div>
                             </div>

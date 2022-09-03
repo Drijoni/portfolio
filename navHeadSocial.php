@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +21,6 @@
                 <li><a href="skills.php">Skills</a></li>
                 <li><a href="projects.php">Projects</a></li>
                 <li><a href="blog.php">Blog</a></li>
-
             </ul>
         </nav>
 
@@ -55,11 +54,15 @@
 
 
     <!--Header and Logo-->
+
     <header>
         <div class="logoContainer">
-            <p>RI</p>
+            <a href="index.php">
+                <p>RI</p>
+            </a>
         </div>
     </header>
+
 
 
     <!--Social Icons Container-->
@@ -84,6 +87,10 @@
         </ul>
     </div>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

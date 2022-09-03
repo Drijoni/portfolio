@@ -34,8 +34,7 @@ if (isset($_POST['submit'])) {
 		
 			header('Location:dashboard.php');
 		} else {
-			echo "<script>alert('Wrong Data')</script>";
-			header('Refresh:0.1;login.php');
+			header('Location:login.php?error=' . urlencode("Wrong data!"));
 		}
 	}
 }

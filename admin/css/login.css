@@ -107,3 +107,7 @@ input[name=submit]:hover {
     color: red;
     transform: translateX(10px);
 }
+
+.err-message {
+    color: red;
+}
